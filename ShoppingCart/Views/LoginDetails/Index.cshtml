@@ -1,0 +1,84 @@
+﻿@model IEnumerable<ShoppingCart.Models.logindetail>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+@Html.Partial("PartialAdmin")
+<h2>User Details</h2>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.First_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Middle_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Last_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dob)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.confirm_password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.roles)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.First_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Middle_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Last_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dob)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.confirm_password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.roles)
+            </td>
+            @*<td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.login_id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.login_id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.login_id })
+            </td>*@
+        </tr>
+    }
+
+</table>
